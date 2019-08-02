@@ -6,7 +6,7 @@ class UserData:
         self.Name = Name
 
     def __repr__(self):
-        return 'ID:{} Name: {}'.format(self.ID, self.Name)
+        return 'ID:{} Name:{}'.format(self.ID, self.Name)
 
 
 
@@ -14,7 +14,7 @@ class UserData:
 
 if __name__=="__main__":
     user1 = UserData(101,'Jack')
-    user2 = UserData(102,'louplus')
+    user2 = UserData(102,'Louplus')
     print(user1)
     print(user2)
 
