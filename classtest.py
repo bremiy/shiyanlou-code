@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
 class UserDate:
-    def __init__(self,ID,Name):
+    def __init__(self,ID,name):
         self.ID = ID
-        self.Name = Name
+        self._name = name
 
     def __repr__(self):
-        return 'ID:{} Name:{}'.format(self.ID, self.Name)
+        return 'ID:{} name:{}'.format(self.ID, self._name)
+
 
 class NewUser(UserDate):
     def get_name(self):
