@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-class UserDate(object):
+class UserDate:
     def __init__(self,ID,Name):
         self.ID = ID
         self.Name = Name
@@ -9,14 +9,10 @@ class UserDate(object):
         return 'ID:{} Name:{}'.format(self.ID, self.Name)
 
 class NewUser(UserDate):
-    def __init__(self,ID):
-        super()._inti_(ID)
-
-
-    def __inti__(self,Name):
-        set_name = Name
-
-
+    def get_name(self):
+        return self._name
+    def set_name(self,value):
+        self._name = value
 
 if __name__=="__main__":
     user1 = NewUser(101,'Jack')
