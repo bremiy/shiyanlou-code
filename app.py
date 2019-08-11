@@ -73,5 +73,12 @@ def register():
     return 'registered successfully!'
 
 
+@app.route('/httptest',request=['GET','POST'])
+def httptest():
+    
+    print('t',request.form.get('t'))
+    print('q',request.form.get('q'))
+    return 'It is get request!'
+
 if __name__ == '__main__':
     app.run()
