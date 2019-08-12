@@ -80,11 +80,13 @@ def register():
 
 @app.route('/httptest', request=['GET', 'POST'])
 def httptest():
-    if request.method == 'POST':
+    if request.method == 'GET':
         print('t', request.form.get('t'))
         print('q', request.form.get('q'))
     return 'It is get request!'
-
+    else request.method == 'POST':
+        print('Q',request.form.get('Q')
+    return 'It is post request!'
 
 if __name__ == '__main__':
     app.run()
