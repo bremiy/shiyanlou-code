@@ -9,10 +9,15 @@ class SpiderTiaozhanSpider(scrapy.Spider):
     start_urls = ['https://github.com/shiyanlou?tab=repositories']
 
     def parse(self, response):
+
         rests = response.xpath('//*[@id="user-repositories-list"]')
         for rest in rests:
-            name = rest.xpath('//h3//a/text()').getall().strip()
-            time = rest.xpath('//relative-time//@datetime').getall()
 
-            item = Tiaozhan15Item(name=name,time=time)
-            yield item
+
+            name = rest.xpath('//h3//a/text()').getall()
+            time = rest.xpath('//relative-time//@datetime').getall()
+            print(name)
+            print(time)
+
+            #item = Tiaozhan15Item(name=name,time=time)
+            #yield item
